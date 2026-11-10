@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav.css">
+    <title>Send a Virtual Hug | SecretSafeSpaces</title>
+</head>
+<body>
+    <!-- TOP NAVIGATION MENU -->
+    <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="hugs.html" class="active">Community Wall</a>
+        <a href="connect.html">1-on-1 Support</a>
+    </nav>
+    
+    <!-- WORK IN PROGRESS NOTICE -->
+    <div class="wip-banner">
+        🌿 <strong>Sanctuary Preview (Under Construction):</strong> Interactive features are currently in prototype mode as we build out the full platform!
+    </div>
+
+        <div class="header">
+        <h1>🤗 Send a Virtual Hug</h1>
+        <p>Leave a quick note of warmth, encouragement, or quiet solidarity for someone having a tough week.</p>
+    </div>
+
+    <div class="feed-container">
+        <div class="post-card">
+            <span class="tag rant">Responding to: Active Vent</span>
+            <h3>"Struggling with work-life balance this week"</h3>
+            <p>Send an anonymous boost of encouragement below to let this member know they arent't alone.</p>
+
+            <form id="hugForm" style="margin-top: 15px;">
+                <label for="hug-message" style="display: block; font-weight: bold; margin-bottom: 8px;">Your Supportive Note:</label>
+                <textarea id="hug-message" rows="4" placeholder="Take a deep breath—you've got this! Sending positive energy your way..." style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc; font-family: inherit; box-sizing: border-box;"></textarea>
+                <br><br>
+                <button type="button" class="btn" onclick="document.getElementById('hugConfirm').style.display='block'; document.getElementById('hug-message').value='';">Send Warmth</button>
+            </form>
+
+            <div id="hugConfirm" class="confirm-box">
+                💛 <strong>Virtual Hug Delivered!</strong> Your note of encouragement has been sent to the sanctuary.
+            </div>
+        </div>
+    </div>
+
+    <!-- COPYRIGHT FOOTER -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Secret Safe Spaces. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

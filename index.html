@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="nav.css">
+  <title>SecretSafeSpaces</title>
+
+</head>
+<body>
+
+  <!-- TOP NAVIGATION MENU -->
+  <nav class="main-nav">
+    <a href="index.html" class="active">Home</a>
+    <a href="hugs.html">Community Wall</a>
+    <a href="connect.html">1-on-1 Support</a>
+  </nav>
+
+  <!-- WORK IN PROGRESS NOTICE -->
+  <div class="wip-banner">
+      🌿 <strong>Sanctuary Preview (Under Construction):</strong> Interactive features are currently in prototype mode as we build out the full platform!
+  </div>
+
+  <div class="header">
+    <h1>Secret Safe Spaces</h1>
+    <p>A drama-free decompression sanctuary to vent, celebrate, and be heard.</p>
+  </div>
+
+  <!-- ONBOARDING SECTION -->
+  <div class="onboarding-container">
+    <div class="choice-card" onclick="showFeed('seeking')">
+      <h2>🌱 Seeking a Space</h2>
+      <p>I need a quiet, supportive sanctuary to read community rants, raves, and let off some steam anonymously.</p>
+      <button class="btn">Enter Sanctuary</button>
+    </div>
+    
+    <div class="choice-card" onclick="showFeed('providing')">
+      <h2>🛡️ Providing a Space</h2>
+      <p>I am here to offer comfort, support, listen to others, and send anonymous blessings to those who need them.</p>
+      <button class="btn">Offer Support</button>
+    </div>
+  </div>
+
+  <!-- DYNAMIC FEED SECTION -->
+  <div class="feed-container" id="feedArea">
+    <div class="post-card" style="text-align: center; color: #7a7571;">
+      <p>⬅️ Click one of the onboarding cards above to see who is active in the sanctuary! ➡️</p>
+    </div>
+  </div>
+
+  <!-- COPYRIGHT FOOTER -->
+  <footer class="site-footer">
+    <p>&copy; 2026 Secret Safe Spaces. All rights reserved.</p>
+  </footer>
+
+  <!-- INTERACTIVE LOGIC (JAVASCRIPT) -->
+  <script src="script.js"></script>
+
+</body>
+</html>
