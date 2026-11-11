@@ -1,73 +1,121 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f7f4ef;
-      color: #2e2a27;
-      margin: 0;
-      padding: 20px;
-    }
-    .header {
-      background-color: #4a5d4e;
-      color: #ffffff;
-      padding: 30px;
-      text-align: center;
-      border-radius: 12px;
-      margin-bottom: 25px;
-    }
-    .onboarding-container {
-      display: flex;
-      gap: 20px;
-      max-width: 700px;
-      margin: 0 auto 30px auto;
-    }
-    .choice-card {
-      background: #ffffff;
-      padding: 30px;
-      flex: 1;
-      text-align: center;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      border: 2px solid transparent;
-      transition: all 0.3s ease;
-      cursor: pointer;
-    }
-    .choice-card:hover {
-      transform: translateY(-5px);
-      border-color: #b07d56;
-    }
-    .choice-card h2 {
-      margin-top: 0;
-      color: #4a5d4e;
-    }
-    .feed-container {
-      max-width: 700px;
-      margin: 0 auto;
-    }
-    .post-card {
-      background: #ffffff;
-      padding: 24px;
-      margin-bottom: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.03);
-    }
-    .tag {
-      display: inline-block;
-      padding: 4px 12px;
-      border-radius: 20px;
-      font-size: 0.85em;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-    .rave { background-color: #d4edda; color: #155724; }
-    .rant { background-color: #f8d7da; color: #721c24; }
-    .btn {
-      background-color: #b07d56;
-      color: white;
-      border: none;
-      padding: 12px 24px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 1em;
-      font-weight: bold;
-    }
-    .btn:hover { background-color: #966541; }
- 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f4ef;
+  color: #2e2a27;
+  margin: 0;
+  padding: 20px;
+}
+  .header {
+    background-color: #4a5d4e;
+    color: #ffffff;
+    padding: 30px;
+    text-align: center;
+    border-radius: 12px;
+    margin-bottom: 25px;
+  }
+  .onboarding-container {
+    display: flex;
+    gap: 20px;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+  }
+  .choice-card {
+    background: #ffffff;
+    padding: 30px;
+    flex: 1;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .choice-card:hover {
+    transform: translateY(-5px);
+    border-color: #b07d56;
+  }
+  .choice-card h2 {
+    margin-top: 0;
+    color: #4a5d4e;
+  }
+  .feed-container {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .post-card {
+    background: #ffffff;
+    padding: 24px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+  }
+  .tag {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .rave { background-color: #d4edda; color: #155724; }
+  .rant { background-color: #f8d7da; color: #721c24; }
+  .btn {
+    background-color: #b07d56;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+  }
+  .btn:hover { background-color: #966541; }
+  /* SCALABLE BANNER IMAGE*/ 
+  .banner-img {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    border-radius: 12px;
+    margin-top: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+/* BREAKPOINT 1: TABLET SCREENS (768px and smaller) */
+@media screen and (max-width: 768px) {
+  .onboarding-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .choice-card {
+    width: 90%;
+    max-width: 500px;
+  } 
+}
+
+/* BREAKPOINT 2: MOBILE PHONE SCREENS (480 and smaller) */
+@media screen {
+  .main-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px;
+  }
+  .main-nav a {
+    margin: 0;
+    padding: 10px 16px;
+  }
+  .header h1 {
+    font-size: 1.6rem;
+  }
+  .banner-img {
+    border-radius: 8px;
+  }  
+}
+
+
+

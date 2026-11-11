@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="nav.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <title>Connect Privately | SecretSafeSpaces</title>
 </head>
-<body>
+<body id="top">
 
     <!-- TOP NAVIGATION MENU -->
     <nav class="main-nav">
         <a href="index.html">Home</a>
         <a href="hugs.html">Community Wall</a>
         <a href="connect.html" class="active">1-on-1 Support</a>
+        <a href="login.html">Register / Login</a>
     </nav>
 
     <!-- WORK IN PROGRESS NOTICE -->
@@ -25,6 +26,7 @@
     <div class="header">
         <h1>🛡️ Connect Privately</h1>
         <p>Start a quiet, judgment-free conversation with an active Support Sentinel.</p>
+        <img src="images/calm_lake.jpg" alt="Peaceful sunrise reflection over a calm lake" class="banner-img">
     </div>
 
     <div class="feed-container">
@@ -33,21 +35,33 @@
             <h3>Request a Private Listening Session</h3>
             <p>Share what is on your mind below. No advice unless you ask for it—just a safe, empathetic ear.</p>
             
-            <form action="#" method="post" style="margin-top: 15px;">
+            <form id="connectform" style="margin-top: 15px;">
                 <label for="alias" style="display: block; font-weight: bold; margin-bottom: 5px;">Choose an Anonymous Alias:</label>
                 <input type="text" id="alias" placeholder="e.g., QuietReader, StarGazer" style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc; margin-bottom: 15px; box-sizing: border-box;">
 
                 <label for="topic" style="display: block; font-weight: bold; margin-bottom: 5px;">What would you like to talk about?</label>
                 <textarea id="topic" rows="4" placeholder="Write as much or as little as you feel comfortable sharing..." style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc; font-family: inherit; box-sizing: border-box;"></textarea>
                 <br><br>
-                <button type="button" class="btn" onclick="alert('Connection request sent! A Support Sentinel will open your private room shortly. 🛡️')">Start Private Chat</button>
+                <button type="button" class="btn" onclick="document.getElementById('connectConfirm').style.display='block'; document.getElementById('alias').value=''; document.getElementById('topic').value='';">🛡️Start Private Chat</button>
             </form>
+
+            <div id="connectConfirm" class="confirm-box">
+                🛡️ <strong>Connection Request Sent!</strong> A Support Sentinel will open your private listening room shortly.
+            </div>
         </div>
     </div>
 
+    <!--EXTERNAL SUPPORT RESOURCE LINK -->
+    <div class="feed-container">
+        <div class="post-card" style="text-align: center;">
+            <p><strong>Need immediate professional crisis support?</strong></p>
+            <p>Visit the <a href="https://988lifeline.org" target="_blank" rel="noopener noreferrer" style="color: #2c3e35; font-weight: bold;">988 Suicide &amp; Crisis Lifeline</a> for free, confidential 24/7 support.</p>
+        </div>
+    </div>
+    
     <!-- COPYRIGHT FOOTER -->
     <footer class="site-footer">
-        <p>&copy; 2026 Secret Safe Spaces. All rights reserved.</p>
+        <p>&copy; 2026 Secret Safe Spaces. All rights reserved. | <a href="#top" style="color: #2c3e35; font-weight: bold;">Back to Top ↑</a></p>
     </footer>
 
 </body>
