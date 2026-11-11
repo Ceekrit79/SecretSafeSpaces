@@ -98,7 +98,7 @@ body {
 }
 
 /* BREAKPOINT 2: MOBILE PHONE SCREENS (480 and smaller) */
-@media screen {
+@media screen and (max-width: 768px) {
   .main-nav {
     display: flex;
     flex-direction: column;
