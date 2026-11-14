@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="nav.css">
     <link rel="icon" type="image/png" href="images/favicon.png">
-    <title>Connect Privately | SecretSafeSpaces</title>
+    <title>1-on-1 Support | Secret Safe Spaces</title>
 </head>
 
 <body id="top">
 
-    <!-- TOP NAVIGATION MENU -->
+    <!-- TOP NAVIGATION MENU (FLEXBOX CONTAINER) -->
     <nav class="main-nav">
         <a href="/">Home</a>
         <a href="/hugs">Community Wall</a>
@@ -20,63 +20,116 @@
         <a href="/login">Register / Login</a>
     </nav>
 
-    <!-- WORK IN PROGRESS NOTICE -->
+    <!-- CONFIDENTIAL SUPPORT WELCOME BANNER -->
     <div class="wip-banner">
-        🌿 <strong>Sanctuary Preview (Under Construction):</strong> Interactive features are currently in prototype mode
-        as we build out the full platform!
+        🌿 <strong>Confidential Listening:</strong> Connect privately with a trusted Support Confidant in a calm,
+        judgment-free space. 🌿
     </div>
 
-    <div class="header">
-        <h1>🛡️ Connect Privately</h1>
-        <p>Start a quiet, judgment-free conversation with an active Support Sentinel.</p>
-        <img src="images/calm_lake.jpg" alt="Peaceful sunrise reflection over a calm lake" class="banner-img">
-    </div>
+    <!-- PAGE HERO HEADER WITH 3-COLUMN FLEXBOX -->
+    <header class="header">
+        <h1>🛡️ 1-on-1 Support 🛡️</h1>
+        <p class="tagline">Start a quiet, one-on-one conversation with an active Support Confidant who is here to
+            listen and give advice, only when you want it.</p>
 
-    <div class="feed-container">
-        <div class="post-card">
-            <span class="tag rave">Support Sentinel Available</span>
-            <h3>Request a Private Listening Session</h3>
-            <p>Share what is on your mind below. No advice unless you ask for it—just a safe, empathetic ear.</p>
+        <div class="about-flex">
+            <!-- Left Info Card -->
+            <div class="about-box">
+                <h2>👂What to Expect👂</h2>
+                <p>
+                    You set the pace. Share as much or as little as you want without pressure, interruption, or
+                    unsolicited advice-just genuine human empathy.
+                </p>
+            </div>
 
-            <form id="connectform" style="margin-top: 15px;">
-                <label for="alias" style="display: block; font-weight: bold; margin-bottom: 5px;">Choose an Anonymous
-                    Alias:</label>
-                <input type="text" id="alias" placeholder="e.g., QuietReader, StarGazer"
-                    style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc; margin-bottom: 15px; box-sizing: border-box;">
+            <!-- Center Focal Image -->
+            <div class="about-image">
+                <img src="images/calm_lake.jpg" alt="Peaceful sunrise reflection over a calm lake" class="banner-img">
+            </div>
 
-                <label for="topic" style="display: block; font-weight: bold; margin-bottom: 5px;">What would you like to
-                    talk about?</label>
-                <textarea id="topic" rows="4"
-                    placeholder="Write as much or as little as you feel comfortable sharing..."
-                    style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc; font-family: inherit; box-sizing: border-box;"></textarea>
-                <br><br>
-                <button type="button" class="btn"
-                    onclick="document.getElementById('connectConfirm').style.display='block'; document.getElementById('alias').value=''; document.getElementById('topic').value='';">🛡️Start
-                    Private Chat</button>
-            </form>
-
-            <div id="connectConfirm" class="confirm-box">
-                🛡️ <strong>Connection Request Sent!</strong> A Support Sentinel will open your private listening room
-                shortly.
+            <!-- Right Info Card -->
+            <div class="about-box">
+                <h2>🔒 Your Privacy Matters 🔒</h2>
+                <p>
+                    Choose any anonymous alias you like before starting your session. Conversations stay private so you
+                    can decompress freely and safely.
+                </p>
             </div>
         </div>
-    </div>
+    </header>
 
-    <!--EXTERNAL SUPPORT RESOURCE LINK -->
-    <div class="feed-container">
-        <div class="post-card" style="text-align: center;">
-            <p><strong>Need immediate professional crisis support?</strong></p>
-            <p>Visit the <a href="https://988lifeline.org" target="_blank" rel="noopener noreferrer"
-                    style="color: #2c3e35; font-weight: bold;">988 Suicide &amp; Crisis Lifeline</a> for free,
-                confidential 24/7 support.</p>
+    <!-- PRIVATE SESSION & CRISIS RESOURCE SECTION -->
+    <main class="wall-wrapper">
+        <div class="community-grid">
+            <!-- Left Grid Card: Private Listening Request Form -->
+            <section class="post-card grid-card" aria-labelledby="session-heading">
+                <div>
+                    <span class="tag rave">Support Confidant Available</span>
+                    <h2 id="session-heading" class="card-heading">Request a Private Listening Session</h2>
+                    <p>Share what is on your mind below. No advice unless you ask for it-just a safe, empathetic ear.
+                    </p>
+
+                    <form id="connectform" class="hug-form">
+                        <label for="alias" class="form-label">Choose an Anonymous Alias:</label>
+                        <input type="text" id="alias" class="form-input" placeholder="e.g., QuietReader, StarGazer">
+
+                        <label for="topic" class="form-label">What would you like to talk about?</label>
+                        <textarea id="topic" rows="4" class="form-textarea"
+                            placeholder="Write as much or as little as you feel comfortable sharing..."></textarea>
+
+                        <button type="button" class="btn"
+                            onclick="document.getElementById('connectConfirm').style.display='block'; document.getElementById('alias').value=''; document.getElementById('topic').value='';">🛡️
+                            Start Private Chat</button>
+                    </form>
+                </div>
+
+                <div id="connectConfirm" class="confirm-box">
+                    🛡️ <strong>Connection Request Sent!</strong> A Support Confidant will open your private listening
+                    room shortly.
+                </div>
+            </section>
+
+            <!-- Right Grid Card: Santuary Guidelines & 988 Resource -->
+            <aside class="post-card grid-card">
+                <div>
+                    <span class="tag rant">Safe Space Guidelines</span>
+                    <h2 class="card-heading">How Our 1-on-1 Rooms Work</h2>
+                    <p>
+                        Our Support Confidants are compassionate peer listeners who hold space for everyday stress,
+                        burnout, and life's heavy moments.
+                    </p>
+                    <p>
+                        Whenever you feel ready, submit your anonymous alias and topic to be paired with an available
+                        listener.
+                    </p>
+
+                    <ul class="session-checklist">
+                        <li><strong>100% Anonymous:</strong> No real names, emails, or personal details required.</li>
+                        <li><strong>Judgment-Free Zone:</strong> Share at your own comfort level without pressure.</li>
+                        <li><strong>Peer-to-Peer Support:</strong> Built for everyday venting and emotional
+                            decompression.</li>
+                    </ul>
+                </div>
+
+                <div class="crisis-box">
+                    <p><strong>Need immediate professional crisis support?</strong></p>
+                    <p>Visit the <a href="https://988lifeline.org" target="_blank" rel="noopener noreferrer"
+                            class="back-to-top">988 Suicide &amp; Crisis Lifeline</a> for free, confidential 24/7
+                        support.
+                    </p>
+                </div>
+            </aside>
         </div>
-    </div>
+    </main>
 
     <!-- COPYRIGHT FOOTER -->
     <footer class="site-footer">
-        <p>&copy; 2026 Secret Safe Spaces. All rights reserved. | <a href="#top"
-                style="color: #2c3e35; font-weight: bold;">Back to Top ↑</a></p>
+        <p>&copy; 2026 Secret Safe Spaces. All rights reserved. | <a href="#top" class="back-to-top">Back to Top ↑</a>
+        </p>
     </footer>
+
+    <!-- INTERACTIVE LOGIC (JAVASCRIPT) -->
+    <script src="script.js"></script>
 
 </body>
 

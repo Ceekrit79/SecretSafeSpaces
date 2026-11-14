@@ -1,5 +1,12 @@
+/* =========================================================
+   GLOBAL BASE STYLES
+   ========================================================= */
 html {
   scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -8,27 +15,155 @@ body {
   color: #2e2a27;
   margin: 0;
   padding: 20px;
+  line-height: 1.6;
 }
 
+/* =========================================================
+   HERO HEADER & ABOUT US FLEXBOX (FLEXBOX CONTAINER #2)
+   Places two text columns on either side of the focal image.
+   ========================================================= */
 .header {
   background-color: #4a5d4e;
   color: #ffffff;
-  padding: 30px;
+  padding: 35px 25px;
   text-align: center;
   border-radius: 12px;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
+.header h1 {
+  margin: 0 0 8px 0;
+  font-size: 2.2rem;
+}
+
+.tagline {
+  margin: 0 auto 25px auto;
+  max-width: 650px;
+  font-size: 1.05rem;
+  color: #eef3ef;
+}
+
+.about-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+  max-width: 1450px;
+  margin: 0 auto;
+}
+
+.about-box {
+  flex: 1;
+  background-color: rgba(225, 225, 225, 0.12);
+  padding: 22px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.about-box h2 {
+  margin-top: 0;
+  font-size: 1.25rem;
+  color: #f7f4ef;
+}
+
+.about-box p {
+  margin-bottom: 0;
+  font-size: 0.96rem;
+  color: #ffffff;
+}
+
+.hero-choice-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  cursor: pointer;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.hero-choice-card:hover {
+  transform: translateY(-4px);
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+.about-image {
+  flex: 1.2;
+  text-align: center;
+}
+
+/* SCALABLE BANNER IMAGE */
+.banner-img {
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
+}
+
+/* =========================================================
+   HOME PAGE PATHWAY SECTION (FLEXBOX CONTAINER #3)
+   ========================================================= */
+.home-content {
+  max-width: 1000px;
+  margin: 0 auto 30px auto;
+  text-align: center;
+}
+
+.mission-section h2 {
+  color: #2c3e35;
+  font-size: 1.7rem;
+  margin-bottom: 10px;
+}
+
+.mission-intro {
+  max-width: 680px;
+  margin: 0 auto 28px auto;
+  color: #5c5346;
+}
+
+.pathway-cards {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.pathway-card {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pathway-card h3 {
+  margin-top: 0;
+  color: #4a5d4e;
+}
+
+.pathway-card p {
+  margin-bottom: 20px;
+  color: #4a4541;
+}
+
+/* =========================================================
+   ONBOARDING & COMMUNITY FEED COMPONENTS
+   ========================================================= */
 .onboarding-container {
   display: flex;
   gap: 20px;
-  max-width: 700px;
+  max-width: 800px;
   margin: 0 auto 30px auto;
 }
 
 .choice-card {
   background: #ffffff;
-  padding: 30px;
+  padding: 28px;
   flex: 1;
   text-align: center;
   border-radius: 12px;
@@ -49,7 +184,7 @@ body {
 }
 
 .feed-container {
-  max-width: 700px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -58,7 +193,7 @@ body {
   padding: 24px;
   margin-bottom: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
 }
 
 .tag {
@@ -81,63 +216,234 @@ body {
 }
 
 .btn {
+  display: inline-block;
+  text-decoration: none;
   background-color: #b07d56;
-  color: white;
+  color: #ffffff;
   border: none;
   padding: 12px 24px;
   border-radius: 6px;
   cursor: pointer;
   font-size: 1em;
   font-weight: bold;
+  transition: background-color 0.25s ease;
 }
 
 .btn:hover {
   background-color: #966541;
 }
 
-/* SCALABLE BANNER IMAGE*/
-.banner-img {
-  width: 100%;
-  max-width: 550px;
-  height: auto;
-  border-radius: 12px;
-  margin-top: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+/* =========================================================
+   COMMUNITY WALL SECTION (CSS GRID LAYOUT)
+   Uses CSS Grid to organize community posts and virtual hug
+   cards into a responsive 2-column grid on desktop.
+   ========================================================= */
+.wall-wrapper {
+  width: 95%;
+  max-width: 1350px;
+  margin: 0 auto 30px auto;
 }
 
-/* BREAKPOINT 1: TABLET SCREENS (768px and smaller) */
+.section-heading {
+  text-align: center;
+  color: #2c3e35;
+  font-size: 1.65rem;
+  margin-bottom: 22px;
+}
+
+.community-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.grid-card {
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hug-form {
+  margin-top: 12px;
+}
+
+.form-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #2c3e35;
+}
+
+.form-textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  margin-bottom: 12px;
+  resize: vertical;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  margin-bottom: 14px;
+}
+
+.card-heading {
+  margin-top: 6px;
+  margin-bottom: 10px;
+  color: #2c3e35;
+  font-size: 1.35rem;
+}
+
+.session-checklist {
+  background-color: #f9f7f3;
+  border-left: 4px solid #4a5d4e;
+  border-radius: 6px;
+  padding: 14px 18px 14px 32px;
+  margin: 18px 0;
+  color: #3d3834;
+}
+
+.session-checklist li {
+  margin-bottom: 8px;
+}
+
+.session-checklist li:last-child {
+  margin-bottom: 0;
+}
+
+.crisis-box {
+  background-color: #f4efe6;
+  border: 1px solid #d8cfc2;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 16px;
+  text-align: center;
+}
+
+.crisis-box p {
+  margin: 6px 0;
+}
+
+.hug-counter {
+  margin-top: 16px;
+}
+
+.btn-outline {
+  background-color: #f4efe6;
+  color: #2c3e35;
+  border: 1.5px solid #b07d56;
+  padding: 9px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: bold;
+  transition: all 0.25s ease;
+}
+
+.btn-outline:hover {
+  background-color: #b07d56;
+  color: #ffffff;
+}
+
+/* =========================================================
+   MEDIA QUERY #1: TABLET SCREENS (768px and smaller)
+   Stacks the 3-column About Us Flexbox and Pathway cards.
+   ========================================================= */
 @media screen and (max-width: 768px) {
+  .about-flex {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .about-box {
+    width: 100%;
+    text-align: center;
+  }
+
+  .pathway-cards,
   .onboarding-container {
     flex-direction: column;
     align-items: center;
-    gap: 20px;
   }
 
+  .pathway-card,
   .choice-card {
-    width: 90%;
-    max-width: 500px;
+    width: 100%;
+    max-width: 550px;
+  }
+
+  .community-grid {
+    grid-template-columns: 1fr;
   }
 }
 
-/* BREAKPOINT 2: MOBILE PHONE SCREENS (480 and smaller) */
-@media screen and (max-width: 768px) {
+/* =========================================================
+   MEDIA QUERY #2: MOBILE PHONE SCREENS (480px and smaller)
+   Stacks top navigation links vertically and scales headings.
+   ========================================================= */
+@media screen and (max-width: 480px) {
+  body {
+    padding: 12px;
+  }
+
   .main-nav {
-    display: flex;
     flex-direction: column;
     gap: 8px;
     padding: 12px;
   }
 
   .main-nav a {
-    margin: 0;
-    padding: 10px 16px;
+    width: 100%;
+    text-align: center;
+    padding: 10px 14px;
+  }
+
+  .header {
+    padding: 24px 16px;
   }
 
   .header h1 {
-    font-size: 1.6rem;
+    font-size: 1.65rem;
   }
 
   .banner-img {
     border-radius: 8px;
+  }
+}
+
+/* =========================================================
+   MEDIA QUERY #3: SMALL MOBILE SCREENS (360px and smaller)
+   Prevents horizontal overflow and tightens card padding
+   down to 350px-360px viewports.
+   ========================================================= */
+@media screen and (max-width: 360px) {
+  body {
+    padding: 8px;
+  }
+
+  .header h1 {
+    font-size: 1.45rem;
+  }
+
+  .about-box,
+  .pathway-card,
+  .choice-card,
+  .post-card {
+    padding: 16px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+    padding: 10px 14px;
+    font-size: 0.95rem;
   }
 }

@@ -13,7 +13,7 @@
 
 <body id="top">
 
-  <!-- TOP NAVIGATION MENU -->
+  <!-- TOP NAVIGATION MENU (FLEXBOX CONTAINER #1)-->
   <nav class="main-nav">
     <a href="/" class="active">Home</a>
     <a href="/hugs">Community Wall</a>
@@ -21,44 +21,80 @@
     <a href="/login">Register / Login</a>
   </nav>
 
-  <!-- WORK IN PROGRESS NOTICE -->
+  <!-- SANCTUARY WELCOME BANNER -->
   <div class="wip-banner">
-    🌿 <strong>Sanctuary Preview (Under Construction):</strong> Interactive features are currently in prototype mode as
-    we build out the full platform!
+    🌿 <strong>Welcome</strong> 🌿 Take a deep breath-you have arrived at a judgment-free space to
+    unwind, share, and feel supported.
   </div>
 
-  <div class="header">
+  <!-- HERO & ABOUT US SECTION (FLEXBOX #2) -->
+  <header class="header">
     <h1>Secret Safe Spaces</h1>
-    <p>A drama-free decompression sanctuary to vent, celebrate, and be heard.</p>
-    <img src="images/bamboo-stones.jpg" alt="Zen stones and green bamboo leaves on soft sand" class="banner-img">
-  </div>
+    <p class="tagline">A drama-free decompression sanctuary to vent, celebrate, and be heard.</p>
 
-  <!-- ONBOARDING SECTION -->
-  <div class="onboarding-container">
-    <div class="choice-card" onclick="showFeed('seeking')">
-      <h2>🌱 Seeking a Space</h2>
-      <p>I need a quiet, supportive sanctuary to read community rants, raves, and let off some steam anonymously.</p>
-      <button class="btn">Enter Sanctuary</button>
-    </div>
+    <div class="about-flex">
+      <!-- Left About Column -->
+      <div class="about-box">
+        <h2>🌱 Why We Exist 🌱</h2>
+        <p>
+          Everyday life can feel loud and overwhelming. Secret Safe Spaces was created as a quiet digital refuge where
+          you can set down your stress, share honest thoughts, and breathe without social media pressure or judgment.
+        </p>
+      </div>
 
-    <div class="choice-card" onclick="showFeed('providing')">
-      <h2>🛡️ Providing a Space</h2>
-      <p>I am here to offer comfort, support, listen to others, and send anonymous blessings to those who need them.</p>
-      <button class="btn">Offer Support</button>
-    </div>
-  </div>
+      <!-- Center Focal Image -->
+      <div class="about-image">
+        <img src="images/bamboo-stones.jpg" alt="Zen stones and green bamboo leaves on soft sand" class="banner-img">
+      </div>
 
-  <!-- DYNAMIC FEED SECTION -->
-  <div class="feed-container" id="feedArea">
-    <div class="post-card" style="text-align: center; color: #7a7571;">
-      <p>⬅️ Click one of the onboarding cards above to see who is active in the sanctuary! ➡️</p>
+      <!--Right About Column -->
+      <div class="about-box">
+        <h2>🛡️ How It Works 🛡️</h2>
+        <p>
+          Whether you want to post an anonymous vent on our Community Wall alongside fellow Sanctuary Companions, send
+          virtual encouragement to others, or
+          connect privately with a caring Support Confidant, you control how you participate.
+        </p>
+      </div>
     </div>
-  </div>
+  </header>
+
+  <!--SANCTUARY PATHWAYS SECTION (FULL VIEWPORT CONTENT & NAVIGATION) -->
+  <main class="home-content">
+    <section class="mission-section">
+      <h2>Your Secret Safe Space</h2>
+      <p class="mission-intro">
+        Every visitor arrives for their own reasons. Explore our community spaces below to find the kind of support that
+        serves your purpose.
+      </p>
+
+      <div class="pathway-cards">
+        <article class="pathway-card">
+          <h3>💬 Visit the Community Wall</h3>
+          <p>
+            Read anonymous rants and celebrations from fellow visitors, share what is on your mind, and send warm
+            virtual hugs to brighten someone's day.
+          </p>
+          <a href="/hugs" class="btn">Go to Community Wall</a>
+        </article>
+
+        <article class="pathway-card">
+          <h3>🤝 Request 1-on-1 Support</h3>
+          <p>
+            Need a quieter conversation? Connect with an active Support Confidant who is ready to listen with empathy
+            and
+            zero unsolicited advice.
+          </p>
+          <a href="/connect" class="btn">Explore 1-on-1 Support</a>
+        </article>
+      </div>
+    </section>
+  </main>
 
   <!-- COPYRIGHT FOOTER -->
   <footer class="site-footer">
-    <p>&copy; 2026 Secret Safe Spaces. All rights reserved. | <a href="#top"
-        style="color: #2c3e35; font-weight: bold;">Back to Top ↑</a></p>
+    <p>&copy; 2026 Secret Safe Spaces. All rights reserved. | <a href="#top" class="back-to-top">Back to Top ↑</a>
+    </p>
   </footer>
 
   <!-- INTERACTIVE LOGIC (JAVASCRIPT) -->

@@ -7,7 +7,7 @@
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="nav.css">
-    <title>Register / Login | SecretSafeSpaces</title>
+    <title>Register / Login | Secret Safe Spaces</title>
 </head>
 
 <body id="top">
@@ -20,35 +20,93 @@
         <a href="/login" class="active">Register / Login</a>
     </nav>
 
-    <!-- WORK IN PROGRESS NOTICE -->
+    <!-- MEMBER PORTAL WELCOME BANNER -->
     <div class="wip-banner">
-        🌿 <strong>Page Under Construction:</strong> Member registration and secure login features are currently in
-        development!
+        🌿 <strong>Member Portal:</strong> Sign in to manage your saved reflections or create a free anonymous sanctuary
+        alias. 🌿
     </div>
 
-    <div class="header">
-        <h1>🔑 Sanctuary Member Portal</h1>
-        <p>Soon you will be able to register an anonymous alias, save supportive notes, and customize your decompression
-            preferences.</p>
-    </div>
+    <!-- PAGE HERO HEADER -->
+    <header class="header">
+        <h1>🔑 Sanctuary Member Portal 🔑</h1>
+        <p class="tagline">
+            Save your favorite virtual hugs, keep track of your anonymous alias or customize how you participate as a
+            Sanctuary Companion or Support Confidant.
+        </p>
+    </header>
 
-    <div class="feed-container">
-        <div class="post-card" style="text-align: center;">
-            <span class="tag rave">Coming Soon</span>
-            <h3>Member Accounts Are Under Construction</h3>
-            <p>While we build out our secure backend database, you can explore the sanctuary anonymously right now with
-                no account required.</p>
-            <br>
-            <a href="/" class="btn" style="text-decoration: none; display: inline-block;">Return to Sanctuary
-                Home</a>
+    <!-- LOGIN & REGISTRATION FORMS (CSS GRID LAYOUT) -->
+    <main class="wall-wrapper">
+        <div class="community-grid">
+            <!-- Left Grid Card: Returning Member Login -->
+            <section class="post-card grid-card" aria-labelledby="login-heading">
+                <div>
+                    <span class="tag rave">Returning Visitor</span>
+                    <h2 id="login-heading" class="card-heading">Sign in to Your Safe Space</h2>
+                    <p>Welcome back. Enter your anonymous alias and passphrase to access your saved preferences.</p>
+
+                    <form id="loginForm" class="hug-form">
+                        <label for="login-alias" class="form-label">Sanctuary Alias:</label>
+                        <input type="text" id="login-alias" class="form-input" placeholder="e.g., QuietReader">
+
+                        <label for="login-pass" class="form-label">Passphrase:</label>
+                        <input type="password" id="login-pass" class="form-input" placeholder="Enter your passphrase">
+
+                        <button type="button" class="btn"
+                            onclick="document.getElementById('loginConfirm').style.display='block'; document.getElementById('login-alias').value=''; document.getElementById('login-pass').value='';">🔑
+                            Sign In</button>
+                    </form>
+                </div>
+
+                <div id="loginConfirm" class="confirm-box">
+                    🔑 <strong>Welcome Back!</strong> You are now signed in to your Secret Safe Spaces profile.
+                </div>
+            </section>
+
+            <!-- Right Grid Card: New Member Registration -->
+            <section class="post-card grid-card" aria-labelledby="register-heading">
+                <div>
+                    <span class="tag rant">New Member</span>
+                    <h2 id="register-heading" class="card-heading">Create an Anonymous Alias</h2>
+                    <p>No real name required. Set up a lightweight profile to save supportive notes and choose your
+                        sanctuary role.</p>
+
+                    <form id="registerForm" class="hug-form">
+                        <label for="reg-alias" class="form-label">Choose an Alias:</label>
+                        <input type="text" id="reg-alias" class="form-input" placeholder="e.g., CalmHorizon">
+
+                        <label for="reg-role" class="form-label">How Would You Like to Participate?</label>
+                        <select id="reg-role" class="form-input">
+                            <option value="companion">🌱 Sanctuary Companion (Community Wall)</option>
+                            <option value="confidant">🛡️ Support Confidant (1-on-1 Listener)</option>
+                            <option value="both">🌿 Both Community &amp; 1-on-1 Support</option>
+                        </select>
+
+                        <label for="reg-pass" class="form-label">Create a Passphrase:</label>
+                        <input type="password" id="reg-pass" class="form-input"
+                            placeholder="Choose a memorable passphrase">
+
+                        <button type="button" class="btn"
+                            onclick="document.getElementById('registerConfirm').style.display='block'; document.getElementById('reg-alias').value=''; document.getElementById('reg-pass').value='';">✨
+                            Create Profile</button>
+                    </form>
+                </div>
+
+                <div id="registerConfirm" class="confirm-box">
+                    ✨ <strong>Alias Created!</strong> Your anonymous sanctuary profile is ready to explore.
+                </div>
+            </section>
         </div>
-    </div>
+    </main>
 
     <!-- COPYRIGHT FOOTER -->
     <footer class="site-footer">
-        <p>&copy; 2026 Secret Safe Spaces. All rights reserved. | <a href="#top"
-                style="color: #2c3e35; font-weight: bold;">Back to Top ↑</a></p>
+        <p>&copy; 2026 Secret Safe Spaces. All rights reserved. | <a href="#top" class="back-to-top">Back to Top ↑</a>
+        </p>
     </footer>
+
+    <!-- INTERACTIVE LOGIC (JAVASCRIPT) -->
+    <script src="script.js"></script>
 
 </body>
 

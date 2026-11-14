@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="nav.css">
     <link rel="icon" type="image/png" href="images/favicon.png">
-    <title>Send a Virtual Hug | SecretSafeSpaces</title>
+    <title>Community Wall | SecretSafeSpaces</title>
 </head>
 
 <body id="top">
-    <!-- TOP NAVIGATION MENU -->
+
+    <!-- TOP NAVIGATION MENU (FLEXBOX CONTAINER) -->
     <nav class="main-nav">
         <a href="/">Home</a>
         <a href="/hugs" class="active">Community Wall</a>
@@ -19,47 +20,119 @@
         <a href="/login">Register / Login</a>
     </nav>
 
-    <!-- WORK IN PROGRESS NOTICE -->
+    <!--COMMUNITY WELCOME BANNER -->
     <div class="wip-banner">
-        🌿 <strong>Sanctuary Preview (Under Construction):</strong> Interactive features are currently in prototype mode
-        as we build out the full platform!
+        🌿 <strong>Enter the Sanctuary:</strong> Share what is on your mind or stand beside fellow members with a note
+        of encouragement. 🌿
     </div>
 
-    <div class="header">
-        <h1>🤗 Send a Virtual Hug</h1>
-        <p>Leave a quick note of warmth, encouragement, or quiet solidarity for someone having a tough week.</p>
-        <img src="images/waves.jpg" alt="calming teal and cream ocean waves" class="banner-img">
-    </div>
+    <!-- PAGE HERO HEADER WITH 3-COLUMN FLEXBOX -->
+    <header class="header">
+        <h1>💬 Community Wall 💬</h1>
+        <p class="tagline">A supportive space for Sanctuary Companions to share honest moments, celebrate wins, leave a
+            quick note of warmth with virtual hugs, and encouragement. Or to provide a quiet solidarity for someone
+            having a tough week.</p>
 
-    <div class="feed-container">
-        <div class="post-card">
-            <span class="tag rant">Responding to: Active Vent</span>
-            <h3>"Struggling with work-life balance this week"</h3>
-            <p>Send an anonymous boost of encouragement below to let this member know they arent't alone.</p>
+        <div class="about-flex">
+            <!-- Left Card: Seeking a Space -->
+            <div class="about-box hero-choice-card" onclick="showFeed('seeking')">
+                <h2>🌱 Seeking a Space 🌱</h2>
+                <p>I need a quiet, supportive corner to read community rants and raves or to let off some of my own
+                    steam anonymously.</p>
+                <button type="button" class="btn">Browse Wall</button>
+            </div>
 
-            <form id="hugForm" style="margin-top: 15px;">
-                <label for="hug-message" style="display: block; font-weight: bold; margin-bottom: 8px;">Your Supportive
-                    Note:</label>
-                <textarea id="hug-message" rows="4"
-                    placeholder="Take a deep breath—you've got this! Sending positive energy your way..."
-                    style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ccc; font-family: inherit; box-sizing: border-box;"></textarea>
-                <br><br>
-                <button type="button" class="btn"
-                    onclick="document.getElementById('hugConfirm').style.display='block'; document.getElementById('hug-message').value='';">Send
-                    Warmth</button>
-            </form>
+            <!--Center Focal Image -->
+            <div class="about-image">
+                <img src="images/waves.jpg" alt="calming teal and cream ocean waves" class="banner-img">
+            </div>
 
-            <div id="hugConfirm" class="confirm-box">
-                💛 <strong>Virtual Hug Delivered!</strong> Your note of encouragement has been sent to the sanctuary.
+            <!--Right Card: Providing a Space -->
+            <div class="about-box hero-choice-card" onclick="showFeed('providing')">
+                <h2>💛 Providing a Space 💛</h2>
+                <p>I am here as a Sanctuary Companion to listen with empathy and send warm virtual hugs to those who
+                    need
+                    them.</p>
+                <button type="button" class="btn">Send Encouragement</button>
             </div>
         </div>
-    </div>
+    </header>
+
+    <!-- DYNAMIC FEED AREA (OPTIONAL FILTER FEEDBACK) -->
+    <div class="feed-container" id="feedArea"></div>
+
+    <!-- COMMUNITY WALL GRID (CSS GRID LAYOUT) -->
+    <main class="wall-wrapper">
+        <h2 class="section-heading">Recent Reflections &amp; Virtual Hugs</h2>
+
+        <div class="community-grid">
+            <!--Grid Card 1: Active Vent + Send Warmth Form -->
+            <article class="post-card grid-card">
+                <span class="tag rant">Active Vent • Sanctuary Companion</span>
+                <h3>"Struggling with work-life balance this week"</h3>
+                <p>Send an anonymous boost of encouragement below to let this member know they aren't alone.</p>
+
+                <form id="hugForm" class="hug-form">
+                    <label for="hug-message" class="form-label">Your Supportive Note:</label>
+                    <textarea id="hug-message" rows="3" class="form-textarea"
+                        placeholder="Take a deep breath-you've got this! Sending positive energy your way..."></textarea>
+                    <button type="button" class="btn"
+                        onclick="document.getElementById('hugConfirm').style.display='block'; document.getElementById('hug-message').value='';">Send
+                        Warmth</button>
+                </form>
+
+                <div id="hugConfirm" class="confirm-box">
+                    💛 <strong>Virtual Hug Delivered!</strong> Your note of encouragement has been shared on the wall.
+                </div>
+            </article>
+
+            <!-- Grid Card 2: Celebration / Rave -->
+            <article class="post-card grid-card">
+                <span class="tag rave">Small Win • Rave</span>
+                <h3>"Finally finished my big project ahead of schedule!"</h3>
+                <p>I have been stressing over deadlines all month, and tonight I actually get to relax with a warm cup
+                    of tea and zero guilt.</p>
+                <div class="hug-counter">
+                    <button type="button" class="btn-outline" onclick="this.textContent='🤗 Virtual Hug Sent (13)';">🤗
+                        Send Virtual Hug (12)</button>
+                </div>
+            </article>
+
+            <!-- Grid Card 3: Quiet Check-In -->
+            <article class="post-card grid-card">
+                <span class="tag rant">Late Night Thoughts • Vent</span>
+                <h3>"Feeling overwhelmed by noise today"</h3>
+                <p>Nothing terrible happened, my brain just feels full. Grateful to have a quiet place where nobody
+                    expects me to put on a happy face.</p>
+                <div class="hug-counter">
+                    <button type="button" class="btn-outline" onclick="this.textContent='🤗 Virtual Hug Sent (9)';">🤗
+                        Send Virtual Hug (8)</button>
+                </div>
+            </article>
+
+            <!--Grid Card 4: Gratitude Note -->
+            <article class="post-card grid-card">
+                <span class="tag rave">Gratitude + Rave</span>
+                <h3>"Thank you to whoever left kind words yesterday"</h3>
+                <p>Reading reminders that I am doing my best really turned my morning around. Paying that warmth
+                    forward
+                    today!</p>
+                <div class="hug-counter">
+                    <button type="button" class="btn-outline" onclick="this.textContent='🤗 Virtual Hug Sent (16)';">🤗
+                        Send Virtual Hug (15)</button>
+                </div>
+            </article>
+        </div>
+    </main>
 
     <!-- COPYRIGHT FOOTER -->
     <footer class="site-footer">
-        <p>&copy; 2026 Secret Safe Spaces. All rights reserved. | <a href="#top"
-                style="color: #2c3e35; font-weight: bold;">Back to Top ↑</a></p>
+        <p>&copy; 2026 Secret Safe Spaces. All rights reserved. | <a href="#top" class="back-to-top">Back to Top ↑</a>
+        </p>
     </footer>
+
+    <!-- INTERACTIVE LOGIC (JAVASCRIPT) -->
+    <script src="script.js"></script>
 
 </body>
 
