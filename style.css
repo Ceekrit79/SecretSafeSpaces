@@ -393,10 +393,10 @@ body {
 }
 
 /* =========================================================
-   MEDIA QUERY #2: MOBILE PHONE SCREENS (480px and smaller)
+   MEDIA QUERY #2: MOBILE & FOLDABLE SCREENS (560px and smaller)
    Stacks top navigation links vertically and scales headings.
    ========================================================= */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 560px) {
   body {
     padding: 12px;
   }
