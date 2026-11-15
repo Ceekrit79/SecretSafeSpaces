@@ -426,6 +426,15 @@ body {
   }
 }
 
+.footer-divider {
+  display: none;
+}
+
+.back-to-top {
+  display: block;
+  margin-top: 8px;
+}
+
 /* =========================================================
    MEDIA QUERY #3: SMALL MOBILE SCREENS (360px and smaller)
    Prevents horizontal overflow and tightens card padding
