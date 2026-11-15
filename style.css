@@ -421,6 +421,10 @@ body {
     font-size: 1.65rem;
   }
 
+  .heading-break {
+    display: block;
+  }
+
   .banner-img {
     border-radius: 8px;
   }
