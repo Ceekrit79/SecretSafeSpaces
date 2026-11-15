@@ -67,6 +67,10 @@
     max-width: 900px;
 }
 
+.banner-title {
+    margin-right: 6px;
+}
+
 /* ON-PAGE CONFIRMATTION MESSAGE */
 .confirm-box {
     display: none;
