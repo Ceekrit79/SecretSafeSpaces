@@ -60,11 +60,11 @@
     color: #5c5346;
     border: 1px dashed #b8a99a;
     text-align: center;
-    padding: 10px 15px;
-    font-size: 0.95rem;
+    padding: 12px 14px;
+    font-size: 1rem;
     border-radius: 6px;
     margin: 10px auto 20px auto;
-    max-width: 900px;
+    max-width: 1150px;
 }
 
 .banner-title {

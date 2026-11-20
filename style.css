@@ -10,12 +10,18 @@ html {
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Nunito", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f7f4ef;
   color: #2e2a27;
   margin: 0;
   padding: 20px;
   line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Lora", Georgia, serif;
 }
 
 /* =========================================================

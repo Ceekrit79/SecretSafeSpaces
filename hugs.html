@@ -4,6 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="nav.css">
     <link rel="icon" type="image/png" href="images/favicon.png">
@@ -14,10 +22,10 @@
 
     <!-- TOP NAVIGATION MENU (FLEXBOX CONTAINER) -->
     <nav class="main-nav">
-        <a href="/">Home</a>
-        <a href="/hugs" class="active">Community Wall</a>
-        <a href="/connect">1-on-1 Support</a>
-        <a href="/login">Register / Login</a>
+        <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+        <a href="hugs.html" class="active"><i class="fa-solid fa-comments"></i> Community Wall</a>
+        <a href="connect.html"><i class="fa-solid fa-hand-holding-heart"></i> 1-on-1 Support</a>
+        <a href="login.html"><i class="fa-solid fa-user-shield"></i> Register / Login</a>
     </nav>
 
     <!--COMMUNITY WELCOME BANNER -->
@@ -77,9 +85,7 @@
                     <label for="hug-message" class="form-label">Your Supportive Note:</label>
                     <textarea id="hug-message" rows="3" class="form-textarea"
                         placeholder="Take a deep breath-you've got this! Sending positive energy your way..."></textarea>
-                    <button type="button" class="btn"
-                        onclick="document.getElementById('hugConfirm').style.display='block'; document.getElementById('hug-message').value='';">Send
-                        Warmth</button>
+                    <button type="button" class="btn" onclick="sendWarmth()">Send Warmth</button>
                 </form>
 
                 <div id="hugConfirm" class="confirm-box">
