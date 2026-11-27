@@ -22,63 +22,64 @@
 <body id="top">
 
   <!-- TOP NAVIGATION MENU (FLEXBOX CONTAINER #1)-->
-  <nav class="main-nav">
-    <a href="index.html" class="active"><i class="fa-solid fa-house"></i> Home</a>
-    <a href="hugs.html"><i class="fa-solid fa-comments"></i> Community Wall</a>
-    <a href="connect.html"><i class="fa-solid fa-hand-holding-heart"></i> 1-on-1 Support</a>
-    <a href="login.html"><i class="fa-solid fa-user-shield"></i> Register / Login</a>
-  </nav>
+  <section class="hero-banner">
+    <nav class="main-nav">
+      <a href="index.html" class="active"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="hugs.html"><i class="fa-solid fa-comments"></i> Community Wall</a>
+      <a href="connect.html"><i class="fa-solid fa-hand-holding-heart"></i> 1-on-1 Support</a>
+      <a href="login.html"><i class="fa-solid fa-user-shield"></i> Register / Login</a>
+    </nav>
 
-  <!-- SANCTUARY WELCOME BANNER -->
-  <div class="wip-banner">
-    <span class="banner-title">🌿 <strong>Welcome</strong> 🌿</span>
-    <span class="banner-text">Take a deep breath-you have arrived at a judgment-free space to
-      unwind, share, and feel supported.</span>
-  </div>
+    <!-- HERO & ABOUT US SECTION (FLEXBOX #2) -->
+    <header class="header">
+      <h1>Secret Safe Spaces</h1>
+      <p class="tagline">A drama-free decompression sanctuary to vent, celebrate, and be heard.</p>
 
-  <!-- HERO & ABOUT US SECTION (FLEXBOX #2) -->
-  <header class="header">
-    <h1>Secret Safe Spaces</h1>
-    <p class="tagline">A drama-free decompression sanctuary to vent, celebrate, and be heard.</p>
-
-    <div class="about-flex">
-      <!-- Left About Column -->
-      <div class="about-box">
-        <h2>🌱 Why We Exist 🌱</h2>
-        <p>
-          Everyday life can feel loud and overwhelming. Secret Safe Spaces was created as a quiet digital refuge where
-          you can set down your stress, share honest thoughts, and breathe without social media pressure or judgment.
-        </p>
+      <!-- SANCTUARY WELCOME BANNER -->
+      <div class="wip-banner">
+        <span class="banner-title">🌿 <strong>Welcome</strong> 🌿</span>
+        <span class="banner-text">Take a deep breath-you have arrived at a judgment-free space to
+          unwind, share, and feel supported.</span>
       </div>
 
-      <!-- Center Focal Image -->
-      <div class="about-image">
-        <img src="images/bamboo-stones.jpg" alt="Zen stones and green bamboo leaves on soft sand" class="banner-img">
-      </div>
+      <div class="about-flex">
+        <!-- Left About Column -->
+        <div class="about-box">
+          <h2>🌱 Why We Exist 🌱</h2>
+          <p>
+            Everyday life can feel loud and overwhelming. Secret Safe Spaces was created as a quiet digital refuge where
+            you can set down your stress, share honest thoughts, and breathe without social media pressure or judgment.
+          </p>
+        </div>
 
-      <!--Right About Column -->
-      <div class="about-box">
-        <h2>🛡️ How It Works 🛡️</h2>
-        <p>
-          Whether you want to post an anonymous vent on our Community Wall alongside fellow Sanctuary Companions, send
-          virtual encouragement to others, or
-          connect privately with a caring Support Confidant, you control how you participate.
-        </p>
+        <!--Right About Column -->
+        <div class="about-box">
+          <h2>🛡️ How It Works 🛡️</h2>
+          <p>
+            Whether you want to post an anonymous vent on our Community Wall alongside fellow Sanctuary Companions, send
+            virtual encouragement to others, or
+            connect privately with a caring Support Confidant, you control how you participate.
+          </p>
+        </div>
       </div>
-    </div>
-  </header>
+    </header>
+  </section>
 
   <!--SANCTUARY PATHWAYS SECTION (FULL VIEWPORT CONTENT & NAVIGATION) -->
   <main class="home-content">
     <section class="mission-section">
-      <h2>Your Secret Safe Space</h2>
+      <h2>Choose Your Sanctuary Path</h2>
       <p class="mission-intro">
         Every visitor arrives for their own reasons. Explore our community spaces below to find the kind of support that
         serves your purpose.
       </p>
 
       <div class="pathway-cards">
-        <article class="pathway-card">
+        <article class="pathway-card card-sage">
+          <div class="card-img-wrap">
+            <img src="images/stepping-stones.jpg"
+              alt="Moss-rimmed zen garden stepping stones crossing a calm sunlit pond">
+          </div>
           <h3>💬 Visit the Community Wall 💬</h3>
           <p>
             Read anonymous rants and celebrations from fellow visitors, share what is on your mind, and send warm
@@ -87,7 +88,11 @@
           <a href="hugs.html" class="btn">Go to Community Wall</a>
         </article>
 
-        <article class="pathway-card">
+        <article class="pathway-card card-terracotta">
+          <div class="card-img-wrap">
+            <img src="images/support-chat.png"
+              alt="Two warm terracotta ceramic teacups with gentle rising steam on a wood table">
+          </div>
           <h3>🤝 Request 1-on-1 Support 🤝</h3>
           <p>
             Need a quieter conversation? Connect with an active Support Confidant who is ready to listen with empathy
@@ -102,9 +107,12 @@
 
   <!-- COPYRIGHT FOOTER -->
   <footer class="site-footer">
-    <p>&copy; 2026 Secret Safe Spaces. All rights reserved. <span class="footer-divider">|</span> <a href="#top"
-        class="back-to-top">Back to Top ↑</a></p>
-
+    <span class="footer-badge">🛡️ 100% Anonymous 🛡️</span>
+    <div class="footer-center">
+      <p>&copy; 2026 Secret Safe Spaces. All rights reserved.</p>
+      <a href="#top" class="back-to-top">Back to Top ↑</a>
+    </div>
+    <span class="footer-badge">🌿 Judgment-Free Refuge 🌿</span>
   </footer>
 
   <!-- INTERACTIVE LOGIC (JAVASCRIPT) -->

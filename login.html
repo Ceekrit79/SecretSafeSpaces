@@ -12,45 +12,69 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
         integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="https://cloudflare.com">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="nav.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <title>Register / Login | Secret Safe Spaces</title>
 </head>
 
 <body id="top">
 
     <!-- TOP NAVIGATION MENU -->
-    <nav class="main-nav">
-        <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
-        <a href="hugs.html"><i class="fa-solid fa-comments"></i> Community Wall</a>
-        <a href="connect.html"><i class="fa-solid fa-hand-holding-heart"></i> 1-on-1 Support</a>
-        <a href="login.html" class="active"><i class="fa-solid fa-user-shield"></i> Register / Login</a>
-    </nav>
+    <section class="hero-banner login-hero">
+        <nav class="main-nav">
+            <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="hugs.html"><i class="fa-solid fa-comments"></i> Community Wall</a>
+            <a href="connect.html"><i class="fa-solid fa-hand-holding-heart"></i> 1-on-1 Support</a>
+            <a href="login.html" class="active"><i class="fa-solid fa-user-shield"></i> Register / Login</a>
+        </nav>
 
-    <!-- MEMBER PORTAL WELCOME BANNER -->
-    <div class="wip-banner">
-        <span class="banner-title">🌿 <strong>Member Portal</strong> 🌿</span>
-        <span class="banner-text">Sign in to manage your saved reflections or create a free anonymous sanctuary
-            alias.</span>
-    </div>
+        <!-- PAGE HERO HEADER WITH 3-COLUMN FLEXBOX -->
+        <header class="header">
+            <h1>🔑 Enter Your Oasis 🔑</h1>
+            <p class="tagline">
+                Save your favorite virtual hugs, keep track of your anonymous alias or customize how you participate as
+                a
+                Sanctuary Companion or Support Confidant.
+            </p>
 
-    <!-- PAGE HERO HEADER -->
-    <header class="header">
-        <h1>🔑 Enter Your Oasis 🔑</h1>
-        <p class="tagline">
-            Save your favorite virtual hugs, keep track of your anonymous alias or customize how you participate as a
-            Sanctuary Companion or Support Confidant.
-        </p>
-    </header>
+            <!-- MEMBER PORTAL WELCOME BANNER -->
+            <div class="wip-banner">
+                <span class="banner-title">🌿 <strong>Member Portal</strong> 🌿</span>
+                <span class="banner-text">Sign in to manage your saved reflections or create a free anonymous sanctuary
+                    alias.</span>
+            </div>
+
+            <div class="about-flex">
+                <!--- Left Card: Zero Personal Info -->
+                <div class="about-box">
+                    <h2>🛡️ Zero Personal Data 🛡️</h2>
+                    <p>No email address, phone number, or real name is ever collected. Your chosen alias keeps your
+                        sanctuary presence completely private.</p>
+                </div>
+
+                <!--- RIGHT CARD: TWO WAYS TO JOIN -->
+                <div class="about-box">
+                    <h2>🌿 Choose Your Role 🌿</h2>
+                    <p>Join as a Sanctuary Companion to save reflections on the Community Wall, or sign up as a Support
+                        Confidant for 1-on-1 listening.</p>
+                </div>
+            </div>
+        </header>
+    </section>
 
     <!-- LOGIN & REGISTRATION FORMS (CSS GRID LAYOUT) -->
     <main class="wall-wrapper">
+        <h2 class="section-heading">Member Access &amp; Alias Setup</h2>
         <div class="community-grid">
             <!-- Left Grid Card: Returning Member Login -->
             <section class="post-card grid-card" aria-labelledby="login-heading">
                 <div>
                     <span class="tag rave">Returning Visitor</span>
+                    <div class="card-img-wrap connect-card-banner">
+                        <img src="images/login-return.jpg"
+                            alt="Arched wooden garden gate opening onto a sunlit stepping-stone path lined with bamboo">
+                    </div>
                     <h2 id="login-heading" class="card-heading">Sign in to Your Safe Space</h2>
                     <p>Welcome back. Enter your anonymous alias and passphrase to access your saved preferences.</p>
 
@@ -59,8 +83,14 @@
                         <input type="text" id="login-alias" class="form-input" placeholder="e.g., QuietReader">
 
                         <label for="login-pass" class="form-label">Passphrase:</label>
-                        <input type="password" id="login-pass" class="form-input" placeholder="Enter your passphrase">
-
+                        <div class="password-wrap">
+                            <input type="password" id="login-pass" class="form-input"
+                                placeholder="Enter your passphrase">
+                            <button type="button" class="toggle-pass" onclick="togglePass('login-pass', this)"
+                                aria-label="Show passphrase">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
                         <button type="button" class="btn"
                             onclick="document.getElementById('loginConfirm').style.display='block'; document.getElementById('login-alias').value=''; document.getElementById('login-pass').value='';">🔑
                             Sign In</button>
@@ -76,6 +106,10 @@
             <section class="post-card grid-card" aria-labelledby="register-heading">
                 <div>
                     <span class="tag rant">New Member</span>
+                    <div class="card-img-wrap connect-card-banner">
+                        <img src="images/login-new.jpg"
+                            alt="Fresh green sprout growing out of warm sunlit sand beside smooth river pebbles">
+                    </div>
                     <h2 id="register-heading" class="card-heading">Create an Anonymous Alias</h2>
                     <p>No real name required. Set up a lightweight profile to save supportive notes and choose your
                         sanctuary role.</p>
@@ -92,8 +126,14 @@
                         </select>
 
                         <label for="reg-pass" class="form-label">Create a Passphrase:</label>
-                        <input type="password" id="reg-pass" class="form-input"
-                            placeholder="Choose a memorable passphrase">
+                        <div class="password-wrap">
+                            <input type="password" id="reg-pass" class="form-input"
+                                placeholder="Choose a memorable passphrase">
+                            <button type="button" class="toggle-pass" onclick="togglePass('reg-pass', this)"
+                                aria-label="Show passphrase">
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                        </div>
 
                         <button type="button" class="btn"
                             onclick="document.getElementById('registerConfirm').style.display='block'; document.getElementById('reg-alias').value=''; document.getElementById('reg-pass').value='';">✨
@@ -111,10 +151,9 @@
     <!-- SANCTUARY MEMBERSHIP & ACCESS COMPARISON TABLE (EXTRA CREDIT) -->
     <section class="table-section">
         <h2 class="section-heading">Sanctuary Membership &amp; Access Overview</h2>
-        <p class="mission-intro">
-            You never need an account to browse or send encouragement, or you can create an anonymous alias for extra
-            sanctuary features.
-        </p>
+        <p class="mission-intro"> An account is never required to browse or send encouragement, yet creating one allows
+            you to create
+            an anonymous alias for extra sanctuary features.</p>
 
         <div class="table-wrapper">
             <table class="sanctuary-table">
@@ -164,9 +203,12 @@
 
     <!-- COPYRIGHT FOOTER -->
     <footer class="site-footer">
-        <p>&copy; 2026 Secret Safe Spaces. All rights reserved. <span class="footer-divider">|</span> <a href="#top"
-                class="back-to-top">Back to Top ↑</a>
-        </p>
+        <span class="footer-badge">🔑 Alias-Only Access 🔑</span>
+        <div class="footer-center">
+            <p>&copy; 2026 Secret Safe Spaces. All rights reserved.</p>
+            <a href="#top" class="back-to-top">Back to Top ↑</a>
+        </div>
+        <span class="footer-badge">🌱 Free Forever 🌱</span>
     </footer>
 
     <!-- INTERACTIVE LOGIC (JAVASCRIPT) -->

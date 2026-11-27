@@ -21,51 +21,49 @@
 <body id="top">
 
     <!-- TOP NAVIGATION MENU (FLEXBOX CONTAINER) -->
-    <nav class="main-nav">
-        <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
-        <a href="hugs.html" class="active"><i class="fa-solid fa-comments"></i> Community Wall</a>
-        <a href="connect.html"><i class="fa-solid fa-hand-holding-heart"></i> 1-on-1 Support</a>
-        <a href="login.html"><i class="fa-solid fa-user-shield"></i> Register / Login</a>
-    </nav>
+    <section class="hero-banner hugs-hero">
+        <nav class="main-nav">
+            <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="hugs.html" class="active"><i class="fa-solid fa-comments"></i> Community Wall</a>
+            <a href="connect.html"><i class="fa-solid fa-hand-holding-heart"></i> 1-on-1 Support</a>
+            <a href="login.html"><i class="fa-solid fa-user-shield"></i> Register / Login</a>
+        </nav>
 
-    <!--COMMUNITY WELCOME BANNER -->
-    <div class="wip-banner">
-        <span class="banner-title">🌿 <strong>Enter the Sanctuary</strong> 🌿</span>
-        <span class="banner-text">Share what is on your mind or stand beside fellow members with a note
-            of encouragement.</span>
-    </div>
+        <!-- PAGE HERO HEADER WITH 3-COLUMN FLEXBOX -->
+        <header class="header">
+            <h1>💬 Community Wall 💬</h1>
+            <p class="tagline">A supportive space for Sanctuary Companions to share honest moments, celebrate wins,
+                leave a
+                quick note of warmth with virtual hugs, and encouragement. Or to provide a quiet solidarity for someone
+                having a tough week.</p>
 
-    <!-- PAGE HERO HEADER WITH 3-COLUMN FLEXBOX -->
-    <header class="header">
-        <h1>💬 Community Wall 💬</h1>
-        <p class="tagline">A supportive space for Sanctuary Companions to share honest moments, celebrate wins, leave a
-            quick note of warmth with virtual hugs, and encouragement. Or to provide a quiet solidarity for someone
-            having a tough week.</p>
-
-        <div class="about-flex">
-            <!-- Left Card: Seeking a Space -->
-            <div class="about-box hero-choice-card" onclick="showFeed('seeking')">
-                <h2>🌱 Seeking a Space 🌱</h2>
-                <p>I need a quiet, supportive corner to read community rants and raves or to let off some of my own
-                    steam anonymously.</p>
-                <button type="button" class="btn">Browse Wall</button>
+            <!--COMMUNITY WELCOME BANNER -->
+            <div class="wip-banner">
+                <span class="banner-title">🌿 <strong>Enter the Sanctuary</strong> 🌿</span>
+                <span class="banner-text">Share what is on your mind or stand beside fellow members with a note
+                    of encouragement.</span>
             </div>
 
-            <!--Center Focal Image -->
-            <div class="about-image">
-                <img src="images/waves.jpg" alt="calming teal and cream ocean waves" class="banner-img">
-            </div>
+            <div class="about-flex">
+                <!-- Left Card: Seeking a Space -->
+                <div class="about-box hero-choice-card" onclick="showFeed('seeking')">
+                    <h2>🌱 Seeking a Space 🌱</h2>
+                    <p>I need a quiet, supportive corner to read community rants and raves or to let off some of my own
+                        steam anonymously.</p>
+                    <button type="button" class="btn">Browse Wall</button>
+                </div>
 
-            <!--Right Card: Providing a Space -->
-            <div class="about-box hero-choice-card" onclick="showFeed('providing')">
-                <h2>💛 Providing a Space 💛</h2>
-                <p>I am here as a Sanctuary Companion to listen with empathy and send warm virtual hugs to those who
-                    need
-                    them.</p>
-                <button type="button" class="btn">Send Encouragement</button>
+                <!--Right Card: Providing a Space -->
+                <div class="about-box hero-choice-card" onclick="showFeed('providing')">
+                    <h2>💛 Providing a Space 💛</h2>
+                    <p>I am here as a Sanctuary Companion to listen with empathy and send warm virtual hugs to those who
+                        need
+                        them.</p>
+                    <button type="button" class="btn">Send Encouragement</button>
+                </div>
             </div>
-        </div>
-    </header>
+        </header>
+    </section>
 
     <!-- DYNAMIC FEED AREA (OPTIONAL FILTER FEEDBACK) -->
     <div class="feed-container" id="feedArea"></div>
@@ -134,9 +132,12 @@
 
     <!-- COPYRIGHT FOOTER -->
     <footer class="site-footer">
-        <p>&copy; 2026 Secret Safe Spaces. All rights reserved. <span class="footer-divider">|</span> <a href="#top"
-                class="back-to-top">Back to Top ↑</a>
-        </p>
+        <span class="footer-badge">💛 Kindness First 💛</span>
+        <div class="footer-center">
+            <p>&copy; 2026 Secret Safe Spaces. All rights reserved.</p>
+            <a href="#top" class="back-to-top">Back to Top ↑</a>
+        </div>
+        <span class="footer-badge">💬 Peer Encouragement 💬</span>
     </footer>
 
     <!-- INTERACTIVE LOGIC (JAVASCRIPT) -->

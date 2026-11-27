@@ -1,5 +1,5 @@
 /* =========================================================
-   GLOBAL BASE STYLES
+   GLOBAL BASE STYLES (WARM BOTANICAL GRADIENT)
    ========================================================= */
 html {
   scroll-behavior: smooth;
@@ -11,10 +11,14 @@ html {
 
 body {
   font-family: "Nunito", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f7f4ef;
+  background-color: #f3e8d8;
+  background:
+    radial-gradient(circle at 12% 65%, rgba(63, 109, 90, 0.24) 0%, transparent 50%),
+    radial-gradient(circle at 88% 82%, rgba(200, 118, 75, 0.24) 0%, transparent 50%),
+    linear-gradient(180deg, #e4eee6 0%, #f5ead9 50%, #e7d9c6 100%);
   color: #2e2a27;
   margin: 0;
-  padding: 20px;
+  padding: 0px;
   line-height: 1.6;
 }
 
@@ -24,52 +28,110 @@ h3 {
   font-family: "Lora", Georgia, serif;
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* =========================================================
    HERO HEADER & ABOUT US FLEXBOX (FLEXBOX CONTAINER #2)
-   Places two text columns on either side of the focal image.
+   Places two text columns on either side of the focal image 
+   (MULTI-STOP GRADIENT + GLOW)
    ========================================================= */
+.hero-banner {
+  background-image: linear-gradient(rgba(20, 40, 31, 0.72), rgba(29, 54, 42, 0.80)), url("images/bamboo-stones.jpg");
+  background-size: cover;
+  background-position: center 75%;
+  border-radius: 0 0 18px 18px;
+  padding: 16px 20px 28px 20px;
+  margin-bottom: 34px;
+  box-shadow: 0 12px 30px rgba(36, 74, 58, 0.22);
+  border-bottom: 5px solid #d48c54;
+}
+
+.hugs-hero {
+  background-image: linear-gradient(rgba(20, 40, 31, 0.72), rgba(29, 54, 42, 0.80)), url("images/balancing-stones.jpg");
+  background-position: center 35%;
+}
+
+.connect-hero {
+  background-image: linear-gradient(rgba(20, 40, 31, 0.72), rgba(29, 54, 42, 0.80)), url("images/teacup.jpg");
+  background-position: center 20%;
+}
+
+.login-hero {
+  background-image: linear-gradient(rgba(20, 40, 31, 0.72), rgba(29, 54, 42, 0.80)), url("images/oasis-pebbles.jpg");
+  background-position: center 10%;
+}
+
 .header {
-  background-color: #4a5d4e;
+  position: relative;
+  background: #2b4a3a;
   color: #ffffff;
-  padding: 35px 25px;
+  padding: 24px 32px 34px 32px;
   text-align: center;
-  border-radius: 12px;
-  margin-bottom: 30px;
+  border-radius: 16px;
+  margin-bottom: 34px;
+  animation: fadeInUp 0.7s ease-out;
+}
+
+.hero-banner .header {
+  background: transparent;
+  box-shadow: none;
+  border-bottom: none;
+  padding-top: 6px;
+  margin-top: 0;
 }
 
 .header h1 {
-  margin: 0 0 8px 0;
-  font-size: 2.2rem;
+  font-size: 2.35rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
 }
 
 .tagline {
-  margin: 0 auto 25px auto;
+  margin: 0 auto 28px auto;
   max-width: 650px;
-  font-size: 1.05rem;
-  color: #eef3ef;
+  font-size: 1.08rem;
+  color: #f9e6d2;
 }
 
 .about-flex {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 35px;
+  gap: 32px;
   max-width: 1450px;
   margin: 0 auto;
 }
 
 .about-box {
   flex: 1;
-  background-color: rgba(225, 225, 225, 0.12);
-  padding: 22px;
-  border-radius: 10px;
+  background-color: rgba(225, 225, 225, 0.14);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(225, 225, 225, 0.25);
+  padding: 24px;
+  border-radius: 14px;
   text-align: center;
+  transition: transform 0.35s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-box:hover {
+  transform: translateY(-5px);
+  background: rgba(225, 225, 225, 0.22);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
 }
 
 .about-box h2 {
   margin-top: 0;
   font-size: 1.25rem;
-  color: #f7f4ef;
+  color: #ffe3c2;
 }
 
 .about-box p {
@@ -99,27 +161,41 @@ h3 {
   text-align: center;
 }
 
-/* SCALABLE BANNER IMAGE */
+/* SCALABLE BANNER IMAGE WITH WARM GLOW & HOVER ZOOM */
 .banner-img {
   width: 100%;
   max-width: 460px;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
+  height: 235px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 15px;
+  border: 3px solid rgba(255, 232, 204, 0.55);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.3);
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.banner-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 14px 32px rgba(212, 140, 84, 0.35);
 }
 
 /* =========================================================
-   HOME PAGE PATHWAY SECTION (FLEXBOX CONTAINER #3)
+   HOME PAGE PATHWAY SECTION (COLOR ACCENTS + PHOTO ZOOM)
+   (FLEXBOX CONTAINER #3)
    ========================================================= */
 .home-content {
-  max-width: 1000px;
+  width: 95%;
+  max-width: 1450px;
   margin: 0 auto 30px auto;
   text-align: center;
+  padding: 0 28px;
 }
 
 .mission-section h2 {
-  color: #2c3e35;
-  font-size: 1.7rem;
+  color: #2b4a3a;
+  font-size: 1.8rem;
   margin-bottom: 10px;
 }
 
@@ -130,30 +206,81 @@ h3 {
 }
 
 .pathway-cards {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 80px;
+  width: 95%;
+  max-width: 1450px;
+  margin: 0 auto 30px auto;
+  padding: 0 28px;
 }
 
 .pathway-card {
   flex: 1;
-  background-color: #ffffff;
+  background: linear-gradient(180deg, #ffffff 0%, #fcf8f2 100%);
+  border-radius: 16px;
+  border-top: 5px solid #3f6d5a;
+  border-left: 5px solid #3f6d5a;
+  border-bottom: 5px solid #c8764b;
+  border-right: 5px solid #c8764b;
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
   padding: 28px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 8px 22px rgba(45, 76, 59, 0.12);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.9s ease-out;
+}
+
+.card-sage {
+  border-top: 6px solid #3f6d5a;
+}
+
+.card-terracotta {
+  border-top: 6px solid #c8764b;
+}
+
+.pathway-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(45, 76, 59, 0.18);
+  border-top: #c8764b;
+  border-bottom: #3f6d5a;
+  border-left-color: #c8764b;
+  border-right-color: #3f6d5a;
+}
+
+.card-img-wrap {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 75%;
+  transition: transform 0.45s ease;
+}
+
+.pathway-card:hover .card-img-wrap img {
+  transform: scale(1.07);
 }
 
 .pathway-card h3 {
   margin-top: 0;
-  color: #4a5d4e;
+  color: #2b4a3a;
 }
 
 .pathway-card p {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   color: #4a4541;
 }
 
@@ -203,40 +330,48 @@ h3 {
 }
 
 .tag {
+  align-self: flex-start;
   display: inline-block;
-  padding: 4px 12px;
+  padding: 5px 14px;
   border-radius: 20px;
   font-size: 0.85em;
   font-weight: bold;
   margin-bottom: 10px;
+  letter-spacing: 0.3px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
 }
 
 .rave {
-  background-color: #d4edda;
+  background: linear-gradient(135deg, #d4edda, #b8e2c4);
   color: #155724;
+  border: 1px solid #9ad1aa;
 }
 
 .rant {
-  background-color: #f8d7da;
-  color: #721c24;
+  background: linear-gradient(135deg, #fce2d4, #f8c8b4);
+  color: #7c2d12;
+  border: 1px solid #f0a88b;
 }
 
 .btn {
   display: inline-block;
   text-decoration: none;
-  background-color: #b07d56;
+  background: linear-gradient(135deg, #b87344 0%, #d48c54 100%);
   color: #ffffff;
   border: none;
   padding: 12px 24px;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
   font-size: 1em;
   font-weight: bold;
-  transition: background-color 0.25s ease;
+  box-shadow: 0 4px 12px rgba(184, 115, 68, 0.28);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
 }
 
 .btn:hover {
-  background-color: #966541;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(184, 115, 68, 0.4);
+  filter: brightness(1.06);
 }
 
 /* =========================================================
@@ -269,6 +404,23 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background: linear-gradient(180deg, #ffffff 0%, #fcf8f3 100%);
+  border-radius: 16px;
+  border-top: 5px solid #3f6d5a;
+  border-left: 5px solid #3f6d5a;
+  border-bottom: 5px solid #c8764b;
+  border-right: 5px solid #c8764b;
+  box-shadow: 0 8px 22px rgba(45, 76, 59, 0.12);
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+.grid-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(45, 76, 59, 0.18);
+  border-top: #c8764b;
+  border-bottom: #3f6d5a;
+  border-left-color: #c8764b;
+  border-right-color: #3f6d5a;
 }
 
 .hug-form {
@@ -301,6 +453,33 @@ h3 {
   margin-bottom: 14px;
 }
 
+.password-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.password-wrap .form-input {
+  padding-right: 42px;
+  margin-bottom: 0;
+}
+
+.toggle-pass {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #5c6b61;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 4px;
+}
+
+.toggle-pass:hover {
+  color: #2b4a3a;
+}
+
 .card-heading {
   margin-top: 6px;
   margin-bottom: 10px;
@@ -309,12 +488,13 @@ h3 {
 }
 
 .session-checklist {
-  background-color: #f9f7f3;
-  border-left: 4px solid #4a5d4e;
-  border-radius: 6px;
-  padding: 14px 18px 14px 32px;
-  margin: 18px 0;
-  color: #3d3834;
+  background: linear-gradient(180deg, #ffffff 0%, #fcf8f2 100%);
+  border-top: 6px solid #3f6d5a;
+  border-radius: 16px;
+  padding: 20px 22px 20px 36px;
+  margin: 40px 0 0 0;
+  color: #2e2a27;
+  box-shadow: 0 8px 22px rgba(45, 76, 59, 0.9);
 }
 
 .session-checklist li {
@@ -326,16 +506,28 @@ h3 {
 }
 
 .crisis-box {
-  background-color: #f4efe6;
-  border: 1px solid #d8cfc2;
-  border-radius: 8px;
-  padding: 16px;
-  margin-top: 16px;
+  background: linear-gradient(180deg, #ffffff 0%, #fcf8f2 100%);
+  border: 1px solid #f0dfd1;
+  border-top: 6px solid #c8764b;
+  border-radius: 16px;
+  padding: 20px 22px;
+  margin-top: 18px;
   text-align: center;
+  box-shadow: 0 8px 22px rgba(45, 76, 59, 0.9);
 }
 
 .crisis-box p {
   margin: 6px 0;
+}
+
+.crisis-link {
+  color: #8c4a27;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.crisis-link:hover {
+  color: #2b4a3a;
 }
 
 .hug-counter {
@@ -343,20 +535,23 @@ h3 {
 }
 
 .btn-outline {
-  background-color: #f4efe6;
-  color: #2c3e35;
-  border: 1.5px solid #b07d56;
+  background-color: #fdf6ee;
+  color: #2b4a3a;
+  border: 2px solid #c8764b;
   padding: 9px 18px;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
   font-size: 0.95rem;
   font-weight: bold;
-  transition: all 0.25s ease;
+  transition: transform 0.2s ease, background-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .btn-outline:hover {
-  background-color: #b07d56;
+  background: linear-gradient(135deg, #b87344, #d48c54);
+  border-color: transparent;
   color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(184, 115, 68, 0.28);
 }
 
 /* =========================================================
@@ -372,8 +567,9 @@ h3 {
 .table-wrapper {
   overflow-x: auto;
   background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(45, 76, 59, 0.01);
+  border-top: 4px solid #d48c54;
 }
 
 .sanctuary-table {
@@ -383,11 +579,16 @@ h3 {
   font-size: 0.98rem;
 }
 
+
 .sanctuary-table th {
-  background-color: #2c3e35;
+  background: linear-gradient(135deg, #2b4a3a 0%, #245b63 100%);
   color: #ffffff;
   font-family: "Lora", Georgia, serif;
-  padding: 14px 18px;
+  padding: 15px 18px;
+}
+
+.sanctuary-table tbody tr {
+  transition: background-color 0.2s ease;
 }
 
 .sanctuary-table td {
@@ -397,12 +598,18 @@ h3 {
 }
 
 .sanctuary-table tbody tr:nth-child(even) {
-  background-color: #f9f7f3;
+  background-color: #f4f7f3;
 }
 
 .sanctuary-table tbody tr:last-child td {
   border-bottom: none;
 }
+
+.sanctuary-table tbody tr:hover {
+  background-color: #fdf2e6;
+}
+
+
 
 /* =========================================================
    MEDIA QUERY #1: TABLET SCREENS (768px and smaller)
@@ -414,6 +621,10 @@ h3 {
     margin-right: 0;
     margin-bottom: 4px;
     font-size: 1rem;
+  }
+
+  .main-nav {
+    gap: 20px;
   }
 
   .about-flex {
@@ -428,6 +639,7 @@ h3 {
 
   .pathway-cards,
   .onboarding-container {
+    grid-template-columns: 1fr;
     flex-direction: column;
     align-items: center;
   }
@@ -435,7 +647,7 @@ h3 {
   .pathway-card,
   .choice-card {
     width: 100%;
-    max-width: 550px;
+    max-width: 100%;
   }
 
   .community-grid {
@@ -454,7 +666,7 @@ h3 {
 
   .main-nav {
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
     padding: 12px;
   }
 
@@ -479,15 +691,16 @@ h3 {
   .banner-img {
     border-radius: 8px;
   }
-}
 
-.footer-divider {
-  display: none;
-}
 
-.back-to-top {
-  display: block;
-  margin-top: 8px;
+  .footer-divider {
+    display: none;
+  }
+
+  .back-to-top {
+    display: block;
+    margin-top: 8px;
+  }
 }
 
 /* =========================================================
